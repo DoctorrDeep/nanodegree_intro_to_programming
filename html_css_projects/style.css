@@ -1,0 +1,20 @@
+div {
+    text-align:center; 
+    color:blueviolet; 
+    }
+
+li strong { color: red;}
+
+div {outline: 2px dotted red;}
+
+.poem {
+    border: 5px solid green;
+    padding: 1.5em;
+    margin: 1em;
+    width: 400px;
+    float: center;
+}
+
+.picture {
+    height: 550px;
+}
