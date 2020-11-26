@@ -1,11 +1,23 @@
 div {
-    text-align:center; 
-    color:blueviolet; 
-    }
+    text-align: center;
+    color: blueviolet;
+}
 
-li strong { color: red;}
+li strong {
+    color: red;
+}
 
-div {outline: 2px dotted red;}
+.my_flex {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+
+    float: left;
+
+    border: 5px solid black;
+    outline: 2px dotted red;
+    margin: 1em;
+}
 
 .poem {
     border: 5px solid green;
@@ -13,8 +25,52 @@ div {outline: 2px dotted red;}
     margin: 1em;
     width: 400px;
     float: center;
+    font-family: Texturina;
 }
 
 .picture {
     height: 550px;
 }
+
+.fancy_bullets {
+    list-style-type: "\1F44D";
+}
+
+h2 {
+    font-family: Tangerine, cursive;
+    color: black;
+    font-size: 30pt;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+p {
+    font-family: "Nerko One", sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
