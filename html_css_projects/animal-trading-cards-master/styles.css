@@ -1,0 +1,67 @@
+/* Box around whole page */
+
+.container {
+    width: 320px;
+    height: 730px;
+    background-color: rgb(13, 139, 40);
+    border: groove 1em rgb(114, 13, 26);
+    border-radius: 2em;
+}
+
+/* Fancy header */
+
+h3 {
+    font-family: Tangerine, cursive;
+    color: rgb(100, 5, 5);
+    font-size: 4em;
+    text-shadow: 4px 4px 4px rgb(223, 108, 108);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* image */
+
+img {
+    margin: 10px;
+}
+
+/* text sections */
+
+.text-info {
+    border: solid 1px rgb(5, 41, 65);
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px;
+}
+
+p {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(10, 19, 99);
+    color: thistle;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.short-description {
+    text-align: center;
+    font: italic small Texturina;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    font: 1em Oswald, cursive;
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    color: rgb(148, 41, 2);
+}
+
+.description {
+    font: small "Nerko One", sans-serif;
+    text-align: justify;
+}
