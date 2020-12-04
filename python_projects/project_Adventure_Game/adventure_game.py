@@ -74,7 +74,7 @@ def cave(weapon: str) -> str:
         print_pause(
             [
                 "You've been here before, and gotten all the good stuff. "
-                "It's just an empty cave now.",
+                "It's just an empty cave now."
             ]
         )
 
@@ -152,11 +152,6 @@ def house(villain, weapon):
         )
         village(villain, weapon)
 
-    # The following else was made obsolete by "validate_input"
-    #     function added after code review #1
-    # else:
-    #     print_pause(["Sorry, did not understand."])
-
 
 def village(villain, weapon):
     """
@@ -180,10 +175,6 @@ def village(villain, weapon):
     elif next_step == "2":
         weapon = cave(weapon)
         village(villain, weapon)
-    # The following else was made obsolete by "validate_input"
-    #     function added after code review #1
-    # else:
-    #     print_pause(["Sorry, did not understand."])
 
 
 def play_game():
@@ -208,11 +199,8 @@ def play_game():
     elif "n" in play_again:
         print_pause(["Thanks for playing! See you next time."])
         return
-    # The following else was made obsolete by "validate_input"
-    #     function added after code review #1
-    # else:
-    #     print_pause(["Sorry, did not understand."])
 
 
 # Begin your adventure
-play_game()
+if __name__ == "__main__":
+    play_game()
