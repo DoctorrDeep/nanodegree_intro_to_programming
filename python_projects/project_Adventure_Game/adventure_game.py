@@ -3,7 +3,7 @@ import random
 import time
 from typing import List
 
-DEBUG_MODE = True
+DEBUG_MODE = False
 
 
 def print_pause(text_list_to_print: List[str], pause_time: int = 2):
