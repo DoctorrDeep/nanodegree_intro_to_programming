@@ -3,7 +3,7 @@ import random
 import time
 from typing import List
 
-DEBUG_MODE = False
+DEBUG_MODE = True
 
 
 def print_pause(text_list_to_print: List[str], pause_time: int = 2):
@@ -37,6 +37,21 @@ def intro(villain: str):
     )
 
 
+def validate_input(input_prompt: str, known_inputs: List[str]) -> str:
+    """
+    Get input from user and retry till it is a valid input.
+    Pass the valid input back to where the call came from
+    """
+    while True:
+        user_input = input(input_prompt).lower()
+        if user_input not in known_inputs:
+            print_pause(["Sorry, did not understand."])
+        else:
+            break
+
+    return user_input
+
+
 def cave(weapon: str) -> str:
     """
     Things to be done in cave
@@ -58,10 +73,8 @@ def cave(weapon: str) -> str:
     elif weapon == "sword":
         print_pause(
             [
-                "You peer cautiously into the cave.",
                 "You've been here before, and gotten all the good stuff. "
                 "It's just an empty cave now.",
-                "You walk back out to the field.",
             ]
         )
 
@@ -95,7 +108,11 @@ def house(villain, weapon):
             ]
         )
 
-    fight_choice = input("Would you like to (1) fight or (2) run away?")
+    fight_choice = validate_input(
+        input_prompt="Would you like to (1) fight or (2) run away?",
+        known_inputs=["1", "2"],
+    )
+
     if fight_choice == "1":
         if weapon == "dagger":
             print_pause(
@@ -134,8 +151,11 @@ def house(villain, weapon):
             ]
         )
         village(villain, weapon)
-    else:
-        print_pause(["Sorry, did not understand."])
+
+    # The following else was made obsolete by "validate_input"
+    #     function added after code review #1
+    # else:
+    #     print_pause(["Sorry, did not understand."])
 
 
 def village(villain, weapon):
@@ -151,15 +171,19 @@ def village(villain, weapon):
             "What would you like to do?",
         ]
     )
-    next_step = input("(Please enter 1 or 2.)\n")
+    next_step = validate_input(
+        input_prompt="(Please enter 1 or 2.)\n", known_inputs=["1", "2"]
+    )
 
     if next_step == "1":
         house(villain, weapon)
     elif next_step == "2":
         weapon = cave(weapon)
         village(villain, weapon)
-    else:
-        print_pause(["Sorry, did not understand."])
+    # The following else was made obsolete by "validate_input"
+    #     function added after code review #1
+    # else:
+    #     print_pause(["Sorry, did not understand."])
 
 
 def play_game():
@@ -173,15 +197,21 @@ def play_game():
     intro(villain)
     village(villain, weapon="dagger")
 
-    play_again = input("Would you like to play again? (y/n)").lower()
+    play_again = validate_input(
+        input_prompt="Would you like to play again? (y/n)",
+        known_inputs=["y", "n"],
+    )
+
     if "y" in play_again:
         print_pause(["Excellent! Restarting the game ..."])
         play_game()
     elif "n" in play_again:
         print_pause(["Thanks for playing! See you next time."])
         return
-    else:
-        print_pause(["Sorry, did not understand."])
+    # The following else was made obsolete by "validate_input"
+    #     function added after code review #1
+    # else:
+    #     print_pause(["Sorry, did not understand."])
 
 
 # Begin your adventure
