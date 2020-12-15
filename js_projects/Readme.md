@@ -11,7 +11,22 @@
   - Document:  Selectors which return NodeLists [https://developer.mozilla.org/en-US/docs/Web/API/NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
     - [https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
     - [https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
-- Text inside seleected: get AND/OR set
+- Text inside selected: get AND/OR set
   - Node: .textContent [https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
   - Element: .innerHTML [https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
   - .innerText [https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText)
+- Create New elements and insert them into HTML
+  - Create a new element (to be inserted into html later)[https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+  - update the text inside it with set `.textContent` on this new element
+  - appendChild to add new element to a place in the HTML (always at end) [https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild) 
+  - .insertAdjacentHTML [https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+- Remove 
+  - [https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
+  - [https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove)
+  - [https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild)
+  - [https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)
+- CSS styles:
+  - [https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style](https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style)
+- Get classes
+  - [https://developer.mozilla.org/en-US/docs/Web/API/Element/classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+  
