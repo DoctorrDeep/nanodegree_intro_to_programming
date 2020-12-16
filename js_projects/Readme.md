@@ -36,3 +36,6 @@
   - [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - Event capturing: [https://www.w3.org/TR/DOM-Level-3-Events/#event-flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
 - MouseEvent [https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
+- Event Delgation: [https://javascript.info/event-delegation](https://javascript.info/event-delegation)
+- nodeName to check before updating/logging [https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName)
+- Check whether DOM has been loaded or not (useful when the js file might go anywhere in the html) [https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
