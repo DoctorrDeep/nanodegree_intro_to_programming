@@ -3,7 +3,7 @@
 
 var sizeM = 1;
 var sizeN = 1;
-var brushColor = "#000000";
+var brushColor = '#000000';
 
 const formDataToGrid = function (gridFormData) {
 
@@ -11,7 +11,7 @@ const formDataToGrid = function (gridFormData) {
 
     sizeM = gridFormData.target[0].value;
     sizeN = gridFormData.target[1].value;
-    console.log("Grid size is " + sizeM + " by " + sizeN);
+    console.log('Grid size is ' + sizeM + ' by ' + sizeN);
     makeGrid();
 
     gridFormData.preventDefault();
@@ -19,7 +19,7 @@ const formDataToGrid = function (gridFormData) {
 
 const colorDetailSetter = function (pixelArtColorData) {
     brushColor = pixelArtColorData.target.value;
-    console.log("Brush color has been set to " + brushColor);
+    console.log('Brush color has been set to ' + brushColor);
 }
 
 const formSizePicker = document.querySelector('#sizePicker');
@@ -48,9 +48,9 @@ function makeGrid() {
 
     const respondToTheClick = function (evt) {
         console.log('A cell was clicked. clientX value = ' + evt.clientX + ', clientY value = ' + evt.clientY + ', pageY value = ' + evt.pageY);
-        console.log("Node name of event is " + evt.target.nodeName + " event target \n" + evt.target.textContent);
+        console.log('Node name of event is ' + evt.target.nodeName + ' event target \n' + evt.target.textContent);
 
-        if (evt.target.nodeName === "TD") { // Remember that nodeName returns Uppercase ONLY
+        if (evt.target.nodeName === 'TD') { // Remember that nodeName returns Uppercase ONLY
             evt.target.style.background = brushColor;
         }
 
@@ -62,10 +62,10 @@ function makeGrid() {
         for (let j = 0; j < sizeN; j++) {
             const newTableElement = document.createElement('td');
             newTableElement.textContent = ' ';
-            newTableElement.style.background = "white";
+            newTableElement.style.background = 'white';
             newRow.appendChild(newTableElement);
         }
-        newTableBody.appendChild(newRow);        
+        newTableBody.appendChild(newRow);
     }
 
     const tableArea = document.querySelector('#pixelCanvas');
